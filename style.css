@@ -113,7 +113,7 @@ div.img-effect1 {
     position: absolute;
     top: 0px;
     left: 5px;
-    z-index: 0;
+    z-index: 2;
     height: 100%;
     width: 100%;
     max-width: 1024px;
@@ -126,7 +126,7 @@ div.img-effect2 {
     position: absolute;
     top: 55px;
     left: -7px;
-    z-index: 0;
+    z-index: 1;
     height: calc(100% - 55px);
     width: 100%;
     max-width: 1024px;
