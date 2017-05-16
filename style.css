@@ -1,0 +1,236 @@
+body {
+    text-align: center;
+    background-color: #F2F2F2;
+}
+header.container {
+    margin: 0 auto;
+    min-height: 298px;
+    max-width: 1024px;
+    background-color: #D5D5D5;
+    position: relative;
+}
+section.container {
+    max-width: 1024px;
+    background-color: #F2F2F2;
+    padding-top: 30px;
+}
+
+footer.container {
+    max-width: 1024px;
+    background-color: #F2F2F2;
+}
+
+div.side-item {
+    background-color: #57BBF8;
+    position: absolute;
+    right: 0;
+    width: 249px;
+    height: 36px;
+    top: 70px;
+    padding: 9px 0px 0px 20px;
+}
+
+div.section-title {
+    color: #B01C33;
+}
+
+div.section-author {
+    max-width: 869px;
+    padding: 30px 30px 20px 30px;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+div.txt-1 {
+    text-align: left;
+}
+
+div.txt-2 {
+    width: calc(100% - 45px);
+    float: right;
+    padding: 0px 5px;
+}
+
+div.msg-text {
+    margin-right: 0px;
+}
+
+div.content-white {
+    float: left;
+    width: 42px;
+    height: 36px;
+}
+div.main-background {
+    margin: 0 auto;
+    min-height: 243px;
+    max-width: 869px;
+    background-image: url("main-bg.png");
+    background-position: center top;
+}
+div.sub-header-logo {
+    margin: 0 auto;
+    height: 55px;
+    max-width: 869px;
+    position: relative;
+}
+
+/* Form */
+form.report-form {
+    padding-left: 15px;
+    text-align: left;
+}
+input.form-control {
+    width: 100%;
+    height: 30px;
+    max-width: 361px; 
+    margin-top: 12px;
+    border-radius: 0px;
+}
+button.bg-red-button {
+    background-color: #B01C33 !important;
+    color: white;
+    height: 54px;
+    max-width: 361px;
+    width: 100%;
+    border-radius: 0px;
+    margin-top: 30px;
+    border-color: #979797;
+}
+/* Form */
+
+div.sub-footer {
+    max-width: 869px;
+    padding: 30px 30px 20px 30px;
+    background-color: #C2C2C2;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+div.img-effect1 {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    max-width: 1024px;
+    background: no-repeat;
+    background-image: url("effect1.png");
+    background-position: center top;
+    opacity: 0.3;
+}
+div.img-effect2 {
+    position: absolute;
+    top: 55px;
+    left: -7px;
+    z-index: 1;
+    height: calc(100% - 55px);
+    width: 100%;
+    max-width: 1024px;
+    background: no-repeat;
+    background-image: url("effect2.png");
+    background-position: center top;
+    opacity: 0.3;
+}
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+/*Font Size*/
+.font-10 {
+    font-size: 10px;
+    letter-spacing: 0px;
+    line-height: 14px;
+}
+.font-18 {
+    font-size: 18px;
+    letter-spacing: -0.38px;
+    line-height: 21px;
+}
+.font-14 {
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 18px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.font-22 {
+    letter-spacing: -0.5px;
+    line-height: 28px;
+    font-weight: 100;
+    font-size: 22px;
+}
+.font-24 {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    line-height: 28px;
+}
+.font-40 {
+    font-size: 40px;
+    letter-spacing: -0.83px;
+    line-height: 47px;
+}
+
+/*padding and margin*/
+.padding-top-15 {
+    padding-top: 15px;
+}
+.padding-top-40 {
+    padding-top: 40px;   
+}
+.padding-left-20 {
+    padding-left: 20px;
+}
+.padding-left-50 {
+    padding-left: 50px;
+}
+.padding-right-70 {
+    padding-right: 70px;
+}
+.padding-40{
+    padding: 0px 40px;
+}
+.padding-50 {
+    padding: 0px 80px;
+}
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.bg-white {
+    background-color: white;
+}
+.color-white {
+    color: white;
+}
+
+.color-red {
+   color: #B01C33;
+}
+
+.color-footer {
+    color: #585858;
+}
+a.color-link {
+    color: #585858 !important;
+}
+.border-0 {
+    border: 0px;
+}
+.z-index-5 {
+    z-index: 5;
+}
+.glyphicon.glyphicon-one-fine-dot:before {
+    content: "\25cf";
+    font-size: 14px;
+    position: absolute;
+    left: -20px;
+}
+
