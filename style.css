@@ -1,12 +1,12 @@
 body {
     text-align: center;
-    background-color: #F2F2F2;
+    background-color: black;
 }
 header.container {
     margin: 0 auto;
     min-height: 298px;
     max-width: 1024px;
-    background-color: #D5D5D5;
+    color: white;
     position: relative;
 }
 section.container {
