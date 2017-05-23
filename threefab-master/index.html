@@ -1,0 +1,189 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>ThreeFab | Three.js fabrication tool</title>
+  <meta name="description" content="Three.js fabrication tool.">
+  <meta name="author" content="Jason Kadrmas">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/colorpicker.css">
+  <link rel="stylesheet" href="css/impromptu.css">
+  <link rel="stylesheet" href="css/jqtree.css">
+  <link rel="stylesheet" href="css/icons.css">
+  
+  <!-- end CSS-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+  <div id="toolbox">
+    <div id="logo"></div>
+    
+    <div class="righttools clearfix">
+      <ul class="light-list clearfix">
+        <li><a href="#point" class="point" data-placement="below" title="Point"></a></li>
+        <li><a href="#spot" class="spot" data-placement="below" title="Spot"></a></li>
+        <li><a href="#ambient" class="ambient" data-placement="below" title="Ambient"></a></li>
+        <!-- <li><a href="#directional" class="directional" title="Directional"></a></li> -->
+        <li></li>
+      </ul>
+      <ul class="toolbox-list clearfix">
+    		<li><a href="#sphere" class="sphere" title="Sphere"></a></li>
+    		<li><a href="#cube" class="cube" title="Cube"></a></li>
+    		<li><a href="#cylinder" class="cylinder" title="Cylinder"></a></li>
+    		<li><a href="#cone" class="cone" title="Cone"></a></li>
+    		<li><a href="#plane" class="plane" title="Plane"></a></li>
+    		<li><a href="#torus" class="torus" title="Torus"></a></li>
+    	</ul>
+    	<ul class="export-list">
+        <li><button class="import button"><span class="icon-download">&nbsp;Import</button>
+        <li><button class="export button"><span class="icon-upload-2">&nbsp;Export</button>
+      </ul>
+      
+  </div>
+  </div>
+  <div id="gui-transform-container">
+    <div class="hierarchy-container">
+      <div class="title"><span class="icon-tree-view"> Hierarchy</div>
+      <div id="tree"></div>
+    </div>
+  </div>
+  <div id="gui-materials-container">
+  	<div></div>
+  </div>
+  <div class="code-container">
+    <button id="hide-button" class="button fr">Hide</button>
+    <pre></pre>
+  </div>
+
+  <div id="bottom-toolbar" class="clearfix">
+    <div class="fl anim-controls">
+      <span class="icon-clock icon-anim"></span> 
+      <div class="fl anim-label">Animation</div>
+      <div class="fr anim-toolbox">
+        <select id="sel-animation" name="sel-animation" class="fl"></select>
+        <div id="edit-animation" class="fl button icon-wrench" title="Edit Animations"></div>
+        <div id="playButton" class="fl button icon-arrow-right-6" title="Play/Pause"></div>
+        <input type="text" id="duration" name="duration" value="1" maxlength="5">&nbsp;sec
+        
+      </div>
+    </div>
+    <!-- <div class="time-buttons">
+      <button class="back button"><span></span></button><button id="playButton" class="play button"><span></span></button><button class="forward button"><span></span></button>
+    </div> --><br>
+    <div class="timeline-container hidden"></div>
+    
+
+    <div class="menu clearfix">
+      <ul>
+        <li>Object
+          <ul>
+            <li id="menu-animate" class="clearfix">Animate <span>Space</span></li>
+            <li id="menu-duplicate" class="clearfix">Duplicate <span>Shift-D</span></li>
+            <li id="menu-delete" class="clearfix">Delete <span>X</span></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/libs/plugins.js"></script>
+  
+  <script src="js/libs/underscore.js"></script>
+  <script src="js/libs/backbone.js"></script>
+
+  <script src="js/mylibs/dat.gui.js"></script>
+  <script src="js/mylibs/Three.js"></script>
+
+  <script src="js/threefab/controls/ViewportControls.js"></script>
+  <script src="js/threefab/objects/ManipulatorTool.js"></script>
+  <script src="js/threefab/objects/Grid.js"></script>
+  
+  <script src="js/threefab/ThreeFab.js"></script>
+  <script src="js/threefab/Events.js"></script>
+  
+  <script src="js/threefab/extras/loaders/OBJLoader.js"></script>
+  <script src="js/threefab/extras/loaders/DragDropLoader.js"></script>
+  <script src="js/threefab/extras/loaders/ColladaLoader.js"></script>
+  <script src="js/threefab/extras/exporter/Exporter.js"></script>
+  <script src="js/threefab/extras/animation/AnimationMorphTarget.js"></script>
+
+  <script src="js/threefab/lights/PointLightContainer.js"></script>
+  <script src="js/threefab/lights/SpotLightContainer.js"></script>
+  <script src="js/threefab/lights/AmbientLightContainer.js"></script>
+  
+  <script src="js/threefab/ui/TextureView.js"></script>
+  <script src="js/threefab/ui/ColorView.js"></script>
+  <script src="js/threefab/ui/LightView.js"></script>
+  <script src="js/threefab/ui/MaterialModel.js"></script>
+  <script src="js/threefab/ui/MaterialView.js"></script>
+  <script src="js/threefab/ui/OutlinerView.js"></script>
+  <script src="js/threefab/ui/ViewportView.js"></script>
+
+  <script src="js/threefab/ui/TransformView.js"></script>
+  <script src="js/threefab/ui/TimelineView.js"></script>
+
+  <script src="js/threefab/Viewport.js"></script>
+  <script src="js/threefab/Ui.js"></script>
+  <script src="js/threefab/Toolbox.js"></script>
+  
+  <script src="js/App.js"></script>
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+  <script type="x-templ" id="template-edit-animations">
+    <div id="edit-animations">
+      <table width="100%">
+        <thead>
+          <th>Animation</th>
+          <th width="50">Start</th>
+          <th width="50">End</th>
+        </thead>
+        <tbody>
+        <% _.each( animations, function( animation, key ) { %>
+          <tr>
+            <td><%= key %></td>
+            <td><input type="text" id="<%= key %>_start" name="<%= key %>_start" value="<%= animation.start %>" size="3"></td>
+            <td><input type="text" id="<%= key %>_end" name="<%= key %>_end" value="<%= animation.end %>" size="3"></td>
+          </tr>
+        <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </script>
+</body>
+</html>
