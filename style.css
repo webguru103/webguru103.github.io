@@ -18,6 +18,7 @@ section.container {
 footer.container {
     max-width: 1024px;
     background-color: #F2F2F2;
+    margin: auto;
 }
 
 div.side-item {
