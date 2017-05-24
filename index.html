@@ -155,10 +155,17 @@
 			    }, 300);
 		    });
 		    $("li.first-menu.active").mouseout(function() {
+		    	console.log('mouseout');
 		    	$("ul.second-menu.visible").mouseout(function() {
 		    		$(this).removeClass('visible');
 		    		$("li.first-menu.active").removeClass('active');
 		    	});
+		    });
+		    $("ul.second-menu.visible").mouseout(function() {
+		    	$("li.first-menu.active").mouseout(function() {
+			    	$(this).removeClass('visible');
+			    	$("li.first-menu.active").removeClass('active');
+			    });
 		    });
 		});
 	</script>
