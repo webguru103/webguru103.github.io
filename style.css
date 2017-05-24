@@ -87,14 +87,14 @@ header.container {
     font-family: "Stag Thin","Georgia",serif;
     padding: 64px 33px;
     list-style-type: none;
-    margin-top: 0;
+    margin-top: -30px;
     margin-bottom: 0;
 }
 
 .second-sub-menu ul.visible {
     display: block;
     z-index: 999;
-    margin-top: 0;
+    margin-top: -30px;
 }
 
 .second-sub-menu li {
