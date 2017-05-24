@@ -24,11 +24,11 @@ header.container {
 }
 
 .sidenav ul {
-    line-style-type: none;
+    list-style-type: none;
 }
 
 .sidenav li {
-    line-style-type: none;
+    list-style-type: none;
     position: relative;
 }
 
