@@ -25,6 +25,7 @@ header.container {
 
 .sidenav ul {
     list-style-type: none;
+    padding-left: 1px;
 }
 
 .sidenav li {
@@ -54,7 +55,7 @@ header.container {
 .sidenav li img {
     position: absolute;
     top: 15px;
-    right: 36px;
+    right: 35px;
     vertical-align: middle;
     display: block;
 }
