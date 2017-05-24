@@ -69,8 +69,11 @@ header.container {
 
 .second-sub-menu {
     position: fixed;
+    top: 0;
     left: 250px;
     z-index: 990;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .second-sub-menu ul {
@@ -84,6 +87,8 @@ header.container {
     font-family: "Stag Thin","Georgia",serif;
     padding: 64px 33px;
     list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .second-sub-menu ul.visible {
