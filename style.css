@@ -28,7 +28,7 @@ header.container {
     padding-left: 1px;
 }
 
-.sidenav li, .second-sub-menu li {
+.sidenav li {
     list-style-type: none;
     position: relative;
 }
@@ -38,18 +38,17 @@ header.container {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
     display: block;
     transition: 0.3s;
     text-align: left;
 }
 
-.sidenav a:hover, .offcanvas a:focus, .second-sub-menu a:hover{
-    color: #f1f1f1;
+.sidenav a {
+    color: #818181;
 }
 
-.sidenav li:hover, .sidenav li:focus {
-    background-color: #44c8fb;
+.sidenav a:hover, .offcanvas a:focus {
+    color: #f1f1f1;
 }
 
 .sidenav li img {
@@ -69,31 +68,50 @@ header.container {
 }
 
 .second-sub-menu {
-    position: absolute;
+    position: fixed;
     left: 250px;
+    z-index: 990;
 }
 
 .second-sub-menu ul {
     display: none;
     top: 0;
     height: 100vh;
-    width: 300px;
+    width: 400px;
     overflow-x: hidden;
     overflow-y: auto;
     font-size: 30px;
     font-family: "Stag Thin","Georgia",serif;
-    color: #c4cccb;
-    padding: 64px 43px;
+    padding: 64px 33px;
     list-style-type: none;
 }
 
 .second-sub-menu ul.visible {
     display: block;
     z-index: 999;
-    position: fixed;
-    background-color: #44c8fb;
     margin-top: 0;
 }
+
+.second-sub-menu li {
+    list-style-type: none;
+}
+
+.second-sub-menu li a {
+    color: #fff;
+}
+
+.second-sub-menu li a:hover, .second-sub-menu li a:focus {
+    font-weight: bolder;
+}
+
+.bg-base-color, .base-color:hover, .base-color:focus { background-color: #44c8fb; }
+.bg-base-color1, .base-color1:hover, .base-color1:focus { background-color: #50ac47; }
+.bg-base-color2, .base-color2:hover, .base-color2:focus { background-color: #394190; }
+.bg-base-color3, .base-color3:hover, .base-color3:focus { background-color: #30bdb0; }
+.bg-base-color4, .base-color4:hover, .base-color4:focus { background-color: #ef5633; }
+.bg-base-color5, .base-color5:hover, .base-color5:focus { background-color: #a43f82; }
+.bg-base-color6, .base-color6:hover, .base-color6:focus { background-color: #de2363; }
+.bg-base-color7, .base-color7:hover, .base-color7:focus { background-color: #f47d22; }
 
 /////
 
