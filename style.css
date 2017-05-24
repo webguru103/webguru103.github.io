@@ -45,6 +45,7 @@ header.container {
 
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
+    background-color: #44c8fb;
 }
 
 .sidenav a img {
