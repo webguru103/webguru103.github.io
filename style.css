@@ -79,7 +79,7 @@ header.container {
     height: 100vh;
     width: 300px;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     font-size: 30px;
     font-family: "Stag Thin","Georgia",serif;
     color: #c4cccb;
@@ -92,6 +92,7 @@ header.container {
     z-index: 999;
     position: fixed;
     background-color: #44c8fb;
+    margin-top: 0;
 }
 
 /////
