@@ -145,6 +145,7 @@
 		$(document).ready(function(){
 		    $("li.first-menu").hover(function(){
 		    	var _nav_id = $(this).attr('data-nav-id');
+		    	$(this).addClass('active');
 		        setTimeout(function() {
 			    	$("ul.second-menu").each(function() {
 			    		if ($(this).attr('data-nav-id') == _nav_id) {
@@ -152,6 +153,12 @@
 			    		}
 			    	});
 			    }, 300);
+		    });
+		    $("li.first-menu.active").mouseout(function() {
+		    	$("ul.second-menu.visible").mouseout(function() {
+		    		$(this).removeClass('visible');
+		    		$("li.first-menu.active").removeClass('active');
+		    	});
 		    });
 		});
 	</script>
