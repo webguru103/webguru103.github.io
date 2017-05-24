@@ -23,17 +23,17 @@ header.container {
     padding-top: 60px;
 }
 
-.sidenav ul {
+.sidenav ul, .second-sub-menu ul {
     list-style-type: none;
     padding-left: 1px;
 }
 
-.sidenav li {
+.sidenav li, .second-sub-menu li {
     list-style-type: none;
     position: relative;
 }
 
-.sidenav a {
+.sidenav a, .second-sub-menu a {
     position: relative;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -44,7 +44,7 @@ header.container {
     text-align: left;
 }
 
-.sidenav a:hover, .offcanvas a:focus{
+.sidenav a:hover, .offcanvas a:focus, .second-sub-menu a:hover{
     color: #f1f1f1;
 }
 
@@ -67,6 +67,24 @@ header.container {
     font-size: 36px;
     margin-left: 50px;
 }
+
+.second-sub-menu {
+    position: absolute;
+    left: 250px;
+}
+
+.second-sub-menu ul {
+    display: none;
+}
+
+.second-sub-menu ul.visible {
+    display: block;
+    z-index: 999;
+    position: fixed;
+    background-color: #44c8fb;
+}
+
+/////
 
 section.container {
     max-width: 1024px;
