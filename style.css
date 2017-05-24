@@ -51,7 +51,7 @@ header.container {
     background-color: #44c8fb;
 }
 
-.sidenav a img {
+.sidenav li img {
     position: absolute;
     top: 15px;
     right: 36px;
