@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: black;
+    background-image: url(./bg.png);
 }
 header.container {
     margin: 0 auto;
