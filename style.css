@@ -1,4 +1,10 @@
+@font-face {
+    font-family: Roboto-regular;
+    src: url(./Roboto-Regular.ttf);
+}
+
 body {
+    font-family: Roboto-regular;
     text-align: center;
     background-image: url(./bg.png);
 }
@@ -10,7 +16,10 @@ header.container {
     position: relative;
 }
 
+/*side menu*/
+
 .sidenav {
+    font-family: Roboto-regular;
     height: 100%;
     width: 0px;
     position: fixed;
@@ -41,7 +50,7 @@ header.container {
     position: relative;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 24px;
     display: block;
     transition: 0.3s;
     text-align: left;
@@ -72,6 +81,7 @@ header.container {
 }
 
 .second-sub-menu {
+    font-family: Roboto-regular;
     position: fixed;
     top: 0;
     left: 250px;
@@ -87,8 +97,7 @@ header.container {
     width: 400px;
     overflow-x: hidden;
     overflow-y: auto;
-    font-family: "Stag Thin","Georgia",serif;
-    padding: 64px 33px;
+    padding: 64px 10px;
     list-style-type: none;
     margin-top: 0px;
     margin-bottom: 0;
@@ -112,7 +121,7 @@ header.container {
 
 .second-sub-menu li a {
     color: #fff;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .second-sub-menu li a:hover, .second-sub-menu li a:focus {
@@ -128,7 +137,7 @@ header.container {
 .bg-base-color6, .base-color6:hover, .base-color6:focus { background-color: #de2363; }
 .bg-base-color7, .base-color7:hover, .base-color7:focus { background-color: #f47d22; }
 
-/////
+/*end side menu*/
 
 section.container {
     max-width: 1024px;

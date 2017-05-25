@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu-system</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<ul>
+			<li class="first-menu base-color" data-nav-id="form"><a href="#">Form</a><img src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png"></li>
+			<li class="first-menu base-color" data-nav-id="racing"><a href="#">Racing</a><img src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png"></li>
+			<li class="first-menu base-color1" data-nav-id="international"><a href="#">International</a><img src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png"></li>
+			<li class="first-menu base-color2" data-nav-id="breeding"><a href="#">Breeding</a><img src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png"></li>
+			<li class="first-menu base-color3" data-nav-id="timeform"><a href="#">Timeform</a></li>
+			<li class="first-menu base-color4" data-nav-id="sports"><a href="#">Sports</a><img src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png"></li>
+			<li class="first-menu base-color5" data-nav-id="shop"><a href="#">Shop</a><img src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png"></li>
+			<li class="first-menu base-color3" data-nav-id="forum"><a href="#">Forum</a></li>
+			<li class="first-menu base-color6" data-nav-id="other"><a href="#">Other</a><img src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png"></li>
+			<li class="first-menu base-color7" data-nav-id="about"><a href="#">About R&S</a></li>
+			<li class="first-menu base-color7" data-nav-id="contact"><a href="#">Contact Us</a></li>
+			<li class="first-menu base-color7" data-nav-id="privacy"><a href="#">Privacy</a></li>
+			<li class="first-menu base-color7" data-nav-id="terms"><a href="#">Terms</a></li>
+			<li class="first-menu base-color7" data-nav-id="copyright"><a href="#">Copyright</a></li>
+		</ul>
+	</div>
+
+	<span style="font-size:30px;cursor:pointer; color: #111; position: absolute; left: 10px; top: 20px; z-index: 100;" onclick="openNav()">&#9776; open</span>
+
+	<div id="second-sub-menu" class="second-sub-menu">
+		<ul class="second-menu bg-base-color" data-nav-id="form">
+			<img onclick="backNav()" src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-white-arrow-left.png">
+			<li><a href="#">Free Form Guide</a></li>
+			<li><a href="#">Feature Race Runners</a></li>
+			<li><a href="#">Black Book</a></li>
+			<li><a href="#">Premierships</a></li>
+		</ul>
+		<ul class="second-menu bg-base-color" data-nav-id="racing">
+			<img onclick="backNav()" src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-white-arrow-left.png">
+			<li><a href="#">Free Form Guide</a></li>
+			<li><a href="#">Results</a></li>
+			<li><a href="#">Racing News</a></li>
+			<li><a href="#">Insight & Analysis</a></li>
+			<li><a href="#">Racing Around</a></li>
+			<li><a href="#">Race Previews</a></li>
+			<li><a href="#">Betting News</a></li>
+			<li><a href="#">Press Room</a></li>
+			<li><a href="#">Scholtz's Say</a></li>
+		</ul>
+		<ul class="second-menu bg-base-color1" data-nav-id="international">
+			<img onclick="backNav()" src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-white-arrow-left.png">
+			<li><a href="#">Singapore/Malaysia</a></li>
+			<li><a href="#">Hong Kong</a></li>
+			<li><a href="#">UK/IRE/Europe</a></li>
+			<li><a href="#">New Zealand</a></li>
+			<li><a href="#">America</a></li>
+			<li><a href="#">Asian Racing</a></li>
+			<li><a href="#">South Africa</a></li>
+			<li><a href="#">Japan</a></li>
+			<li><a href="#">Whistle Jacket</a></li>
+		</ul>
+		<ul class="second-menu bg-base-color2" data-nav-id="breeding">
+			<img onclick="backNav()" src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-white-arrow-left.png">
+			<li><a href="#">Breeding News</a></li>
+			<li><a href="#">Breeding Briefs</a></li>
+			<li><a href="#">Breeding NZ</a></li>
+			<li><a href="#">International</a></li>
+			<li><a href="#">Sibling Reports</a></li>
+			<li><a href="#">Stakes Races</a></li>
+		</ul>
+		<ul class="second-menu bg-base-color4" data-nav-id="sports">
+			<img onclick="backNav()" src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-white-arrow-left.png">
+			<li><a href="#">AFL</a></li>
+			<li><a href="#">Rugby League</a></li>
+			<li><a href="#">Rugby Union</a></li>
+			<li><a href="#">Cricket</a></li>
+			<li><a href="#">Tennis</a></li>
+			<li><a href="#">Golf</a></li>
+			<li><a href="#">Football</a></li>
+			<li><a href="#">Others</a></li>
+		</ul>
+		<ul class="second-menu bg-base-color5" data-nav-id="shop">
+			<img onclick="backNav()" src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-white-arrow-left.png">
+			<li><a href="#">Final Report</a></li>
+			<li><a href="#">Computer Card</a></li>
+		</ul>
+		<ul class="second-menu bg-base-color6" data-nav-id="other">
+			<img onclick="backNav()" src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-white-arrow-left.png">
+			<li><a href="#">Racing and Sports TV</a></li>
+			<li><a href="#">Business Partners</a></li>
+			<li><a href="#">News Submissions</a></li>
+			<li><a href="#">Iphone</a></li>
+			<li><a href="#">Advertising</a></li>
+		</ul>
+	</div>
+	<div>
+		<img src="./bg.png" style="width: 100%;">
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script>
+    	var _nav_id = '';
+    	var _visible_menu = null;
+		function openNav() {
+		    $("#mySidenav").addClass('sidenav-width');
+		}
+
+		function closeNav() {
+		    $("#mySidenav").removeClass('sidenav-width');
+		    if (_visible_menu != null) {
+		    	_visible_menu.removeClass('visible');
+		    	_visible_menu = null;
+		    }
+		}
+
+		function backNav() {
+			if (_visible_menu != null) {
+		    	_visible_menu.removeClass('visible');
+		    	_visible_menu = null;
+		    }
+		}
+
+		function init() {
+			if ($(window).width() <= 659){	
+					$("li.first-menu").click(function(){
+				    	_nav_id = $(this).attr('data-nav-id');
+				    	if (_visible_menu != null) {
+				    		console.log(_visible_menu.attr('data-nav-id'));
+				    		if (_visible_menu.attr('data-nav-id') == _nav_id) {
+				    			return;
+				    		}
+				    		_visible_menu = null;
+					    	$("ul.second-menu").each(function() {
+						    	if ($(this).attr('data-nav-id') == _nav_id) {
+						    		_visible_menu = $(this);
+						    	}
+						    	$(this).removeClass('visible');
+						    });
+					        setTimeout(function() {
+						    	if (_visible_menu != null){
+						    		_visible_menu.addClass('visible');
+						    	}
+						    }, 600);
+				    	} else {
+					    	$("ul.second-menu").each(function() {
+						    	if ($(this).attr('data-nav-id') == _nav_id) {
+						    		_visible_menu = $(this);
+						    	}
+						    	$(this).removeClass('visible');
+						    });
+					        setTimeout(function() {
+						    	if (_visible_menu != null){
+						    		_visible_menu.addClass('visible');
+						    	}
+						    }, 600);
+					    }
+				    });
+				    return;
+				}
+				$("div.second-sub-menu").bind('mouseleave', function(){
+				    console.log('mouseout');
+				    if (_visible_menu != null) {
+				    	_visible_menu.removeClass('visible');
+				    	_visible_menu = null;
+				    }
+				});
+
+			    $("li.first-menu").hover(function(){
+			    	_nav_id = $(this).attr('data-nav-id');
+			    	if (_visible_menu != null) {
+			    		console.log(_visible_menu.attr('data-nav-id'));
+			    		if (_visible_menu.attr('data-nav-id') == _nav_id) {
+			    			return;
+			    		}
+			    		_visible_menu = null;
+				    	$("ul.second-menu").each(function() {
+					    	if ($(this).attr('data-nav-id') == _nav_id) {
+					    		_visible_menu = $(this);
+					    	}
+					    	$(this).removeClass('visible');
+					    });
+				        setTimeout(function() {
+					    	if (_visible_menu != null){
+					    		_visible_menu.addClass('visible');
+					    	}
+					    }, 600);
+			    	} else {
+				    	$("ul.second-menu").each(function() {
+					    	if ($(this).attr('data-nav-id') == _nav_id) {
+					    		_visible_menu = $(this);
+					    	}
+					    	$(this).removeClass('visible');
+					    });
+				        setTimeout(function() {
+					    	if (_visible_menu != null){
+					    		_visible_menu.addClass('visible');
+					    	}
+					    }, 600);
+				    }
+			    }, function(){});
+		}
+
+		init();
+
+		$(document).ready(function(){
+			$(window).resize(function(){
+				init();
+			});
+		});
+	</script>
+</body>
+
+</html>
