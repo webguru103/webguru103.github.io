@@ -21,9 +21,9 @@ header.container {
 
 .bg-image {
     background-image: url(./bg.png);
-    background-position: center;
+    background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
 }
 
 .sidenav {
@@ -410,6 +410,7 @@ a.color-link {
   .second-sub-menu {left: 0; z-index: 1100;}
   .second-sub-menu ul {width: 100vw; padding: 64px 28px;}
   .second-sub-menu ul img {display: block;}
+  .bg-image {background-position: top left;}
 }
 
 @media screen and (max-height: 450px) {
