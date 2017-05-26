@@ -113,10 +113,12 @@
     	var _visible_menu = null;
 		function openNav() {
 		    $("#mySidenav").addClass('sidenav-width');
+		    $("div.bg-image").addClass('sidenav-width');
 		}
 
 		function closeNav() {
 		    $("#mySidenav").removeClass('sidenav-width');
+		    $("div.bg-image").removeClass('sidenav-width');
 		    if (_visible_menu != null) {
 		    	_visible_menu.removeClass('visible');
 		    	_visible_menu = null;
