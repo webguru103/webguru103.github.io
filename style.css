@@ -70,7 +70,7 @@ header.container {
     position: relative;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 23px;
     display: block;
     transition: 0.3s;
     text-align: left;
@@ -168,7 +168,7 @@ header.container {
 
 .second-sub-menu li a {
     color: #fff;
-    font-size: 22px;
+    font-size: 21px;
 }
 
 .second-sub-menu li a:hover, .second-sub-menu li a:focus {
@@ -413,7 +413,6 @@ a.color-link {
 
 @media screen and (max-width: 659px) {
   .sidenav.sidenav-width {width: 100%;}
-  .sidenav a {font-size: 18px;}
   .second-sub-menu {left: 0; z-index: 1100;}
   .second-sub-menu ul {width: 100vw; padding: 64px 28px;}
   .second-sub-menu ul img {display: block;}
@@ -422,5 +421,4 @@ a.color-link {
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
 }

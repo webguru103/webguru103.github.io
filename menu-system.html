@@ -25,7 +25,7 @@
 			<li class="first-menu base-color5" data-nav-id="shop"><a href="#">Shop</a><img src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png"></li>
 			<li class="first-menu base-color3" data-nav-id="forum"><a href="#">Forum</a></li>
 			<li class="first-menu base-color6" data-nav-id="other"><a href="#">Other</a><img src="http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png"></li>
-			<li class="first-menu base-color7" data-nav-id="about"><a href="#">About R&S</a></li>
+			<li class="first-menu base-color7" data-nav-id="about"><a href="#">About <span style="color: green;">R&S</span></a></li>
 			<li class="first-menu base-color7" data-nav-id="contact"><a href="#">Contact Us</a></li>
 			<li class="first-menu base-color7" data-nav-id="privacy"><a href="#">Privacy</a></li>
 			<li class="first-menu base-color7" data-nav-id="terms"><a href="#">Terms</a></li>
@@ -179,6 +179,7 @@
 
 			    $("li.first-menu").hover(function(){
 			    	_nav_id = $(this).attr('data-nav-id');
+			    	$(this).find('img').attr('src', 'http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-white-arrow-right.png');
 			    	if (_visible_menu != null) {
 			    		console.log(_visible_menu.attr('data-nav-id'));
 			    		if (_visible_menu.attr('data-nav-id') == _nav_id) {
@@ -209,7 +210,9 @@
 					    	}
 					    }, 600);
 				    }
-			    }, function(){});
+			    }, function(){
+			    	$(this).find('img').attr('src', 'http://beta.nzherald.co.nz/pb/resources/assets/icons/navigation/menu/border-nav-arrows/png/border-grey-arrow-right.png');
+			    });
 		}
 
 		init();
